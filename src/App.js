@@ -26,10 +26,63 @@ function App() {
   return (
     <div>
       <Router>
-        <Menu/>
+        <nav class="navbar">
+          <div class="logo">MUO</div>
+          <ul class="nav-links">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          
+            <div class="menu">
+              <li class="services">
+                <p>Root Of Equation</p>
+                <ul class="dropdown">
+                  <li><Link to="/one-point-iteration">One Point Iteration</Link></li>
+                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
+                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
+                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
+                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
+                </ul>
+              </li>
+              <li class="services">
+                <p>Service</p>
+                <ul class="dropdown">
+                  <li><a href="/">Dropdown 1 </a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 3</a></li>
+                  <li><a href="/">Dropdown 4</a></li>
+                </ul>
+              </li>
+              <li class="services">
+                <p>Service</p>
+                <ul class="dropdown">
+                  <li><a href="/">Dropdown 1 </a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 3</a></li>
+                  <li><a href="/">Dropdown 4</a></li>
+                </ul>
+              </li>
+              <li class="services">
+                <p>Service</p>
+                <ul class="dropdown">
+                  <li><a href="/">Dropdown 1 </a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 3</a></li>
+                  <li><a href="/">Dropdown 4</a></li>
+                </ul>
+              </li>
+              <li><a href="/">Pricing</a></li>
+              <li><a href="/">Contact</a></li>
+            </div>
+          </ul>
+        </nav>
+        <Switch>
         <Switch>
             <Route path="/one-point-iteration" exact component={OnePointIteration} />  
             <Route path="/newton-rapson" exact component={Newtonrapson} />  
+        </Switch>
         </Switch>
       </Router>
     </div>
