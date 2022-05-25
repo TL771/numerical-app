@@ -1,8 +1,8 @@
 import './App.css';
 import {
   BrowserRouter as Router,
-  Routes,
-  Route
+  Route,
+  Switch,Link
 } from "react-router-dom";
 import Menu from './Component/Menu/Menu';
 import Binarystyle from './Component/RootOfEquation/BisectionAndFalsePosition/BisectionAndFalsePosition'
@@ -26,9 +26,10 @@ function App() {
     <div>
       <Router>
         <Menu/>
-        <Routes>
-            <Route path="/newton-rapson" element={<Newtonrapson />} />  
-        </Routes>
+        <Link to='/newton-rapson'>Newtonrapson</Link>
+        <Switch>
+            <Route path="/newton-rapson" exact component={Newtonrapson} />  
+        </Switch>
       </Router>
     </div>
   );
