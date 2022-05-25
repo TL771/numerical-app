@@ -4,9 +4,8 @@ import {
   Route,
   Switch,Link
 } from "react-router-dom";
-import { Navbar,Container,Nav ,NavDropdown} from 'react-bootstrap';
-import Menu from './Component/Menu/Menu';
-import Binarystyle from './Component/RootOfEquation/BisectionAndFalsePosition/BisectionAndFalsePosition'
+import Binarystyle from './Component/RootOfEquation/BisectionAndFalsePosition/BisectionAndFalsePosition';
+import Falseposition from './Component/RootOfEquation/False-position/Falsepos'
 import Newtonrapson from './Component/RootOfEquation/NR/NR';
 import OnePointIteration from './Component/RootOfEquation/OnePointIteration/OnePointIteration'
 import Secant from './Component/RootOfEquation/Secant/Secant';
@@ -24,28 +23,41 @@ import Regression from './Component/Regression/Regression';
 function App() {
   
   return (
-    <div>
+    <div className="app">
       <Router>
-        <Link to="/bisection">Bisection Method</Link>
-        <Link to="/false-position">False-Position Method</Link>
-        <Link to="/one-point-iteration">One-point-iteration Method</Link>
-        <Link to="/newton-rapson">Newton Rapson</Link>
-        <Link to="/secant">Secant Method</Link>
-        <Link to="/cramerule">Cramerule</Link>
-        <Link to="/GuessEliminateMethod">Guess Eliminate Method</Link>
-        <Link to="/GaussJordanMethod">Gauss Jordan Method</Link>
-        <Link to="/JocobiIterationMethod">Jocobi Iteration Method</Link>
-        <Link to="/GaussSeidelIterationMethod">Gauss Seidel Iteration Method</Link>
-        <Link to="/ConjugateGradientMethod">Conjugate Gradient Method</Link>
-        <Link to="/Newtondivideddifferences">/Newton Divided Differences</Link>
-        <Link to="/Largrange">Largrange</Link>
-        <Link to="/Regression">Regression</Link>
-        <Switch>
-        <Switch>
+        <div className={"container-link"}>
+          <ul>
+            <li>Root of Equation
+            <ul>
+              <li><Link to="/bisection">Bisection Method</Link></li>
+              <li><Link to="/false-position">False-Position Method</Link></li>
+              <li><Link to="/one-point-iteration">One-point-iteration Method</Link></li>
+              <li><Link to="/newton-rapson">Newton Rapson</Link></li>
+              <li><Link to="/secant">Secant Method</Link></li>
+            </ul></li>
+            <li>Liner System 
+            <ul>
+              <li><Link to="/cramerule">Cramerule</Link></li>
+              <li><Link to="/GuessEliminateMethod">Guess Eliminate Method</Link></li>
+              <li><Link to="/GaussJordanMethod">Gauss Jordan Method</Link></li>
+              <li><Link to="/JocobiIterationMethod">Jocobi Iteration Method</Link></li>
+              <li><Link to="/GaussSeidelIterationMethod">Gauss Seidel Iteration Method</Link></li>
+              <li><Link to="/ConjugateGradientMethod">Conjugate Gradient Method</Link></li>
+            </ul></li>
+            <li>Intepolation
+            <ul>
+              <li><Link to="/Newtondivideddifferences">Newton Divided Differences</Link></li>
+              <li><Link to="/Largrange">Largrange</Link></li>
+            </ul></li>
+            <li><Link to="/Regression">Regression</Link></li>
+          </ul>
+        </div>
+
+        <Switch className="content">
             <Route path="/newton-rapson" exact component={Newtonrapson} />  
-            <Route path="/bisection" exact component={Newtonrapson} />
+            <Route path="/bisection" exact component={Binarystyle} />
             <Route path="/one-point-iteration" exact component={OnePointIteration} />  
-            <Route path="/false-position" exact component={Newtonrapson} />
+            <Route path="/false-position" exact component={Falseposition} />
             <Route path="/secant" exact component={Secant} />
 
             <Route path="/cramerule" exact component={Cramer} />
@@ -60,7 +72,6 @@ function App() {
             
 
             <Route path="/Regression" exact component={Regression} />
-        </Switch>
         </Switch>
       </Router>
     </div>

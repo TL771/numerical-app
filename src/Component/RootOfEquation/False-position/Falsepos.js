@@ -1,14 +1,14 @@
 import './BisectionAndFalsePosition.css'
 import axios from 'axios';
 import {Component} from 'react';
-import bisection from '../Module/Bisection';
+import falseposition from '../Module/FalsePosition';
 import AlgebraLatex from 'algebra-latex';
 import '../../../../node_modules/react-vis/dist/style.css';
 import {XYPlot, LineSeries,VerticalGridLines,HorizontalGridLines,XAxis,YAxis } from 'react-vis';
 
 
 
-class Binarystyle extends Component{
+export default class Falseposition extends Component{
   constructor(props){
     super(props);
     console.log(this.props.methodName)
@@ -40,7 +40,8 @@ class Binarystyle extends Component{
   }
   FindAnswer(){
     let ans;
-    ans =  bisection(this.state.eqation,parseInt(this.state.x1),parseInt(this.state.x2))
+    console.log('false-position test');
+    ans = falseposition(this.state.eqation,parseInt(this.state.x1),parseInt(this.state.x2))
     this.setState(
         {   answer : ans.x , 
             i : ans.i , 
@@ -71,7 +72,7 @@ class Binarystyle extends Component{
   render() {
     return (
       <div>
-      <h2>Bisection Method</h2>
+      <h2>False Position Method</h2>
       <div className="from form-control">
         <div className="mb-3">
           <label className="form-label">Eqation</label>
@@ -142,5 +143,3 @@ class Binarystyle extends Component{
     )
   }
 }
-
-export default Binarystyle;
