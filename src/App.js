@@ -26,62 +26,40 @@ function App() {
   return (
     <div>
       <Router>
-        <nav class="navbar">
-          <div class="logo">MUO</div>
-          <ul class="nav-links">
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-          
-            <div class="menu">
-              <li class="services">
-                <p>Root Of Equation</p>
-                <ul class="dropdown">
-                  <li><Link to="/one-point-iteration">One Point Iteration</Link></li>
-                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
-                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
-                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
-                  <li><Link to="/newton-rapson">Newton rapson</Link></li>
-                </ul>
-              </li>
-              <li class="services">
-                <p>Service</p>
-                <ul class="dropdown">
-                  <li><a href="/">Dropdown 1 </a></li>
-                  <li><a href="/">Dropdown 2</a></li>
-                  <li><a href="/">Dropdown 2</a></li>
-                  <li><a href="/">Dropdown 3</a></li>
-                  <li><a href="/">Dropdown 4</a></li>
-                </ul>
-              </li>
-              <li class="services">
-                <p>Service</p>
-                <ul class="dropdown">
-                  <li><a href="/">Dropdown 1 </a></li>
-                  <li><a href="/">Dropdown 2</a></li>
-                  <li><a href="/">Dropdown 2</a></li>
-                  <li><a href="/">Dropdown 3</a></li>
-                  <li><a href="/">Dropdown 4</a></li>
-                </ul>
-              </li>
-              <li class="services">
-                <p>Service</p>
-                <ul class="dropdown">
-                  <li><a href="/">Dropdown 1 </a></li>
-                  <li><a href="/">Dropdown 2</a></li>
-                  <li><a href="/">Dropdown 2</a></li>
-                  <li><a href="/">Dropdown 3</a></li>
-                  <li><a href="/">Dropdown 4</a></li>
-                </ul>
-              </li>
-              <li><a href="/">Pricing</a></li>
-              <li><a href="/">Contact</a></li>
-            </div>
-          </ul>
-        </nav>
+        <Link to="/bisection">Bisection Method</Link>
+        <Link to="/false-position">False-Position Method</Link>
+        <Link to="/one-point-iteration">One-point-iteration Method</Link>
+        <Link to="/newton-rapson">Newton Rapson</Link>
+        <Link to="/secant">Secant Method</Link>
+        <Link to="/cramerule">Cramerule</Link>
+        <Link to="/GuessEliminateMethod">Guess Eliminate Method</Link>
+        <Link to="/GaussJordanMethod">Gauss Jordan Method</Link>
+        <Link to="/JocobiIterationMethod">Jocobi Iteration Method</Link>
+        <Link to="/GaussSeidelIterationMethod">Gauss Seidel Iteration Method</Link>
+        <Link to="/ConjugateGradientMethod">Conjugate Gradient Method</Link>
+        <Link to="/Newtondivideddifferences">/Newton Divided Differences</Link>
+        <Link to="/Largrange">Largrange</Link>
+        <Link to="/Regression">Regression</Link>
         <Switch>
         <Switch>
-            <Route path="/one-point-iteration" exact component={OnePointIteration} />  
             <Route path="/newton-rapson" exact component={Newtonrapson} />  
+            <Route path="/bisection" exact component={Newtonrapson} />
+            <Route path="/one-point-iteration" exact component={OnePointIteration} />  
+            <Route path="/false-position" exact component={Newtonrapson} />
+            <Route path="/secant" exact component={Secant} />
+
+            <Route path="/cramerule" exact component={Cramer} />
+            <Route path="/GuessEliminateMethod" exact component={GEM} />
+            <Route path="/GaussJordanMethod" exact component={GJM} />
+            <Route path="/JocobiIterationMethod" exact component={Jacobi} />
+            <Route path="/GaussSeidelIterationMethod" exact component={Seidel} />
+            <Route path="/ConjugateGradientMethod" exact component={Conjugate} />
+
+            <Route path="/Newtondivideddifferences" exact component={Newtondiff} />
+            <Route path="/Largrange" exact component={Largrange} />
+            
+
+            <Route path="/Regression" exact component={Regression} />
         </Switch>
         </Switch>
       </Router>

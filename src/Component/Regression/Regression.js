@@ -33,7 +33,7 @@ export default class Regression extends Component {
         let data;
         data = [];
         this.setState({
-            type : e.target.value,
+            type : parseInt(e.target.value),
             data,
             head : ["X0","Y"],
             j : 1,
