@@ -11,10 +11,6 @@ export default function falseposition(equation,xl,xr,iteration=1){
     if(Math.sign(fxl)*Math.sign(fxr) > 0)return -1;
     const x1 = ((xl*fxr)-(xr*fxl))/(fxr-fxl);
     const fx1 = f(equation,x1);
-    console.log(`iteration ${iteration}`)
-    console.log(`xl = ${xl}\nxr = ${xr}\nxm = ${x1}`)
-    console.log(`f(xm) = ${f(x1)}`)
-    console.log(`----------------------------------`)
     const checkLR = Math.sign(fxl)*Math.sign(fx1) < 0;
     i.push({
         i:iteration,

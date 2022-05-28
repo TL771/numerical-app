@@ -11,10 +11,10 @@ export default function bisection(equation,xl,xr,iteration=1){
     if(Math.sign(fxl)*Math.sign(fxr) > 0)return -1;
     const xm = (xl+xr)/2;
     const fxm = f(equation,xm);
-    console.log(`iteration ${iteration}`)
-    console.log(`xl = ${xl}\nxr = ${xr}\nxm = ${xm}`)
-    console.log(`f(xm) = ${f(xm)}`)
-    console.log(`----------------------------------`)
+    // console.log(`iteration ${iteration}`)
+    // console.log(`xl = ${xl}\nxr = ${xr}\nxm = ${xm}`)
+    // console.log(`f(xm) = ${f(xm)}`)
+    // console.log(`----------------------------------`)
     const checkLR = Math.sign(fxl)*Math.sign(fxm) < 0;
     i.push({
         i:iteration,
